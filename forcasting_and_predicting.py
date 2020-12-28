@@ -1,4 +1,3 @@
-# Based on "Machine Learning with Python" at https://www.youtube.com/playlist?list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v
 # The Linear Regression to predict a stock price in the future
 
 # Precondition
@@ -59,7 +58,7 @@ print(df)
 
 # Prepare to predict
 
-X = np.array(df.drop(['label'],1))
+X = np.array(df.drop(['label'], 1))
 X = preprocessing.scale(X) # This step must be before the downsizing of X, otherwise it'd plot a flat line.
 X_lately = X[-forecast_out:]
 X = X[:-forecast_out]
